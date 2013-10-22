@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<compute-center-types>
+    <compute-center-type>
+        <name>OpenStack Compute</name>
+        <description>OpenStack Compute</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.GenericOpenStackConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Password</name>
+                <description>Password</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Token Authentication Url</name>
+                <description>Token Authentication Url</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Compute Service Name</name>
+                <description>Compute Service Name</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+        <machine-descriptor-definitions>
+            <property-definition>
+                <name>Flavor Ref</name>
+                <description>Configuration of the associated server</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Region</name>
+                <description>Region</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Security Group</name>
+                <description>Security Group, separated by semi-colon</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Key Pair</name>
+                <description>Key Pair</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+			<property-definition>
+                <name>Floating Ip</name>
+                <description>Floating Ip</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Admin Password</name>
+                <description>Admin Password</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv4 Address</name>
+                <description>Access IPv4 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv6 Address</name>
+                <description>Access IPv6 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </machine-descriptor-definitions>
+    </compute-center-type>
+    <compute-center-type>
+        <name>Rackspace OpenStack Cloud Server</name>
+        <description>Rackspace OpenStack Cloud Server</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.RackspaceOpenstackConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Api Key</name>
+                <description>Api Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Location</name>
+                <description>Location of your Rackspace account</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value>US</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>US,UK</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+        <machine-descriptor-definitions>
+            <property-definition>
+                <name>Flavor Ref</name>
+                <description>Configuration of the associated server</description>
+                <required>true</required>
+                <type>STRING</type>
+				<default-string-value>RAM: 512MB Disk: 20GB</default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values>RAM: 512MB Disk: 20GB,RAM: 1GB Disk: 40GB,RAM: 2GB Disk: 80GB,RAM: 4GB Disk: 160GB,RAM: 8GB Disk: 320GB,RAM: 115GB Disk: 620GB,RAM: 30GB Disk: 12TB</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Region</name>
+                <description>Region</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value>ORD</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>ORD,DFW,LON</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Admin Password</name>
+                <description>Admin Password</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv4 Address</name>
+                <description>Access IPv4 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv6 Address</name>
+                <description>Access IPv6 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </machine-descriptor-definitions>
+    </compute-center-type>
+    <compute-center-type>
+        <name>HP Cloud Compute</name>
+        <description>HP Cloud Compute</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.HPCloudComputeConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access Key</name>
+                <description>Access Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Secret Key</name>
+                <description>Secret Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+        <machine-descriptor-definitions>
+            <property-definition>
+                <name>Flavor Ref</name>
+                <description>Configuration of the associated server</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value>standard.small</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>standard.xsmall,standard.small,standard.medium,standard.large,standard.xlarge,standard.2xlarge</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Region</name>
+                <description>Region</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value>az-1.region-a.geo-1</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>az-1.region-a.geo-1,az-2.region-a.geo-1,az-3.region-a.geo-1</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Security Group</name>
+                <description>Security Group, separated by semi-colon</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Key Pair</name>
+                <description>Key Pair</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+			<property-definition>
+                <name>Floating Ip</name>
+                <description>Floating Ip</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </machine-descriptor-definitions>
+    </compute-center-type>
+    <compute-center-type>
+        <name>Rackspace Openstack Private Cloud</name>
+        <description>Rackspace Openstack Private Cloud</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.RackspacePrivateCloudConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Password</name>
+                <description>Password</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Token Authentication Url</name>
+                <description>Authentication Url</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+        <machine-descriptor-definitions>
+            <property-definition>
+                <name>Flavor Ref</name>
+                <description>Configuration of the associated server</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value>m1.small</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>m1.tiny,m1.small,m1.medium,m1.large,m1.xlarge</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Region</name>
+                <description>Region</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>RegionOne</allowed-string-values>
+                <default-file-value>RegionOne</default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Security Group</name>
+                <description>Security Group, separated by semi-colon</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Key Pair</name>
+                <description>Key Pair</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+			<property-definition>
+                <name>Floating Ip</name>
+                <description>Floating Ip</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Admin Password</name>
+                <description>Admin Password</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv4 Address</name>
+                <description>Access IPv4 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access IPv6 Address</name>
+                <description>Access IPv6 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </machine-descriptor-definitions>
+    </compute-center-type>
+</compute-center-types>

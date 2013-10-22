@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<image-repository-types>
+    <image-repository-type>
+        <name>OpenStack Compute</name>
+        <description>OpenStack Compute</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.GenericOpenStackConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Password</name>
+                <description>Password</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Token Authentication Url</name>
+                <description>Token Authentication Url</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Compute Service Name</name>
+                <description>Compute Service Name</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+    </image-repository-type>
+    <image-repository-type>
+        <name>Rackspace OpenStack Cloud Server</name>
+        <description>Rackspace OpenStack Cloud Server</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.RackspaceOpenstackConnector
+        </connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Api Key</name>
+                <description>Api Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Location</name>
+                <description>Location of your Rackspace account</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value>US</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values>US,UK</allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+    </image-repository-type>
+    <image-repository-type>
+        <name>HP Cloud Compute</name>
+        <description>HP Cloud Compute</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.HPCloudComputeConnector
+        </connector-impl-class-name>
+       <property-definitions>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Access Key</name>
+                <description>Access Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Secret Key</name>
+                <description>Secret Key</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+    </image-repository-type>
+    <image-repository-type>
+        <name>Rackspace Openstack Private Cloud</name>
+        <description>Rackspace Openstack Private Cloud</description>
+        <connector-impl-class-name>
+			com.singularity.ee.connectors.openstack.impl.RackspacePrivateCloudConnector
+		</connector-impl-class-name>
+        <property-definitions>
+            <property-definition>
+                <name>User Name</name>
+                <description>User Name</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Password</name>
+                <description>Password</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Tenant Id</name>
+                <description>Tenant Id</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Token Authentication Url</name>
+                <description>Authentication Url</description>
+                <required>true</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+        </property-definitions>
+    </image-repository-type>
+</image-repository-types>

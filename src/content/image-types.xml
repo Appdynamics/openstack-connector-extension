@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<image-types>
+	<image-type>
+		<name>OpenStack Compute Image</name>
+		<description>OpenStack Compute Image</description>
+		<property-definitions>
+			<property-definition>
+				<name>Image Ref</name>
+				<description>Image Ref</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+		</property-definitions>
+		<supported-compute-center-types>
+			<compute-center-type>OpenStack Compute</compute-center-type>
+		</supported-compute-center-types>
+	</image-type>
+	<image-type>
+		<name>Rackspace OpenStack Cloud Server Image</name>
+		<description>Rackspace OpenStack Cloud Server Image</description>
+		<property-definitions>
+			<property-definition>
+				<name>Image Ref</name>
+				<description>Image Ref</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+		</property-definitions>
+		<supported-compute-center-types>
+			<compute-center-type>Rackspace OpenStack Cloud Server</compute-center-type>
+			<compute-center-type>Rackspace Openstack Private Cloud</compute-center-type>
+		</supported-compute-center-types>
+	</image-type>
+	<image-type>
+		<name>HP Cloud Compute Image</name>
+		<description>HP Cloud Compute Image</description>
+		<property-definitions>
+			<property-definition>
+				<name>Image Ref</name>
+				<description>Image Ref</description>
+				<required>true</required>
+				<type>STRING</type>
+				<default-string-value></default-string-value>
+				<string-max-length>80</string-max-length>
+				<allowed-string-values></allowed-string-values>
+				<default-file-value></default-file-value>
+			</property-definition>
+		</property-definitions>
+		<supported-compute-center-types>
+			<compute-center-type>HP Cloud Compute</compute-center-type>
+		</supported-compute-center-types>
+	</image-type>
+</image-types>

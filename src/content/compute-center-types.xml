@@ -4,8 +4,8 @@
         <name>OpenStack Compute</name>
         <description>OpenStack Compute</description>
         <connector-impl-class-name>
-			com.singularity.ee.connectors.openstack.impl.GenericOpenStackConnector
-		</connector-impl-class-name>
+            com.appdynamics.connectors.openstack.impl.GenericOpenStackConnector
+        </connector-impl-class-name>
         <property-definitions>
             <property-definition>
                 <name>User Name</name>
@@ -145,8 +145,8 @@
         <name>Rackspace OpenStack Cloud Server</name>
         <description>Rackspace OpenStack Cloud Server</description>
         <connector-impl-class-name>
-			com.singularity.ee.connectors.openstack.impl.RackspaceOpenstackConnector
-		</connector-impl-class-name>
+            com.appdynamics.connectors.openstack.impl.RackspaceOpenstackConnector
+        </connector-impl-class-name>
         <property-definitions>
             <property-definition>
                 <name>User Name</name>
@@ -236,8 +236,8 @@
         <name>HP Cloud Compute</name>
         <description>HP Cloud Compute</description>
         <connector-impl-class-name>
-			com.singularity.ee.connectors.openstack.impl.HPCloudComputeConnector
-		</connector-impl-class-name>
+            com.appdynamics.connectors.openstack.impl.HPCloudComputeConnector
+        </connector-impl-class-name>
         <property-definitions>
             <property-definition>
                 <name>Tenant Id</name>
@@ -327,8 +327,8 @@
         <name>Rackspace Openstack Private Cloud</name>
         <description>Rackspace Openstack Private Cloud</description>
         <connector-impl-class-name>
-			com.singularity.ee.connectors.openstack.impl.RackspacePrivateCloudConnector
-		</connector-impl-class-name>
+            com.appdynamics.connectors.openstack.impl.RackspacePrivateCloudConnector
+        </connector-impl-class-name>
         <property-definitions>
             <property-definition>
                 <name>User Name</name>

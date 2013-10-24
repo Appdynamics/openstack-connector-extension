@@ -39,6 +39,7 @@ openstack-connector-extension
 6. Go to the controller dashboard on the browser. Under Setup->My Preferences->Advanced Features enable "Show Cloud Auto-Scaling features" if it is not enabled. 
 7. On the controller dashboard click "Cloud Auto-Scaling" and configure the compute cloud and the image.
 
+Click Compute Cloud->Register Compute Cloud. Refer to the image below
 
 ![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Fields.png?login=rvasanda&token=7f509b16f54234b256e7a4b9a5fbaf6b)
 

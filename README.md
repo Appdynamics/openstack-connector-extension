@@ -1,4 +1,4 @@
-cloudstack-connector-extension
+openstack-connector-extension
 ===========================
 
 ##Use Case
@@ -16,7 +16,7 @@ cloudstack-connector-extension
 </tr>
 <tr>
 <td class='confluenceTd'> src </td>
-<td class='confluenceTd'> Contains source code to the cloudstack connector extension </td>
+<td class='confluenceTd'> Contains source code to the openstack connector extension </td>
 </tr>
 <tr>
 <td class='confluenceTd'> dist </td>
@@ -31,24 +31,24 @@ cloudstack-connector-extension
 
 ##Installation
 
-1. Clone the cloudstack-connector-extension from GitHub
-2. Run 'ant package' from the cloned cloudstack-connector-extension directory
-3. Download the file cloudstack-connector.zip located in the 'dist' directory into \<controller install dir\>/lib/connectors
+1. Clone the openstack-connector-extension from GitHub
+2. Run 'ant package' from the cloned openstack-connector-extension directory
+3. Download the file openstack-connector.zip located in the 'dist' directory into \<controller install dir\>/lib/connectors
 4. Unzip the downloaded file
 5. Restart the Controller
 6. Go to the controller dashboard on the browser. Under Setup->My Preferences->Advanced Features enable "Show Cloud Auto-Scaling features" if it is not enabled. 
 7. On the controller dashboard click "Cloud Auto-Scaling" and configure the compute cloud and the image.
 
 
-![alt tag](https://raw.github.com/Appdynamics/cloudstack-connector-extension/master/cloudstack%20Compute%20Fields.png?login=rvasanda&token=d91e71eab74fcc62f39e9ff97c9e64c2)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/openstack%20Compute%20Fields.png?login=rvasanda&token=d91e71eab74fcc62f39e9ff97c9e64c2)
 
 Click Image->Register Image. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/cloudstack-connector-extension/master/cloudstack%20Compute%20Image.png?login=rvasanda&token=208d96dd3dc67f354f9055537454f61d)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/openstack%20Compute%20Image.png?login=rvasanda&token=208d96dd3dc67f354f9055537454f61d)
 
 ##Contributing
 
-Always feel free to fork and contribute any changes directly via [GitHub](https://github.com/Appdynamics/cloudstack-connector-extension).
+Always feel free to fork and contribute any changes directly via [GitHub](https://github.com/Appdynamics/openstack-connector-extension).
 
 ##Community
 

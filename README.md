@@ -40,11 +40,11 @@ openstack-connector-extension
 7. On the controller dashboard click "Cloud Auto-Scaling" and configure the compute cloud and the image.
 
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/openstack%20Compute%20Fields.png?login=rvasanda&token=d91e71eab74fcc62f39e9ff97c9e64c2)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Fields.png?login=rvasanda&token=7f509b16f54234b256e7a4b9a5fbaf6b)
 
 Click Image->Register Image. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/openstack%20Compute%20Image.png?login=rvasanda&token=208d96dd3dc67f354f9055537454f61d)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Image.png?login=rvasanda&token=115e990ccc6ba6ae95c294affc71fe51)
 
 ##Contributing
 

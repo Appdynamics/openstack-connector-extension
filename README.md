@@ -51,11 +51,11 @@ Lastly, the openstack-connector-extension may be used to stage migration of an a
 
 Click Compute Cloud->Register Compute Cloud. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Fields.png?login=rvasanda&token=7f509b16f54234b256e7a4b9a5fbaf6b)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Fields.png)
 
 Click Image->Register Image. Refer to the image below
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Image.png?login=rvasanda&token=115e990ccc6ba6ae95c294affc71fe51)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Image.png)
 
 ##Contributing
 

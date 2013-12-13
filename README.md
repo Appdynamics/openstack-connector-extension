@@ -1,5 +1,5 @@
-openstack-connector-extension
-===========================
+OpenStack Connector Extension
+=============================
 
 ##Use Case
 

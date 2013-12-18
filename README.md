@@ -15,7 +15,7 @@ Lastly, the openstack-connector-extension may be used to stage migration of an a
 
 The OpenStack connector is actually a meta-connector and supports the following OpenStack cloud implementations:
 
-1. OpenStack Nova
+1. OpenStack Compute (Nova)
 2. Rackspace OpenStack Public Cloud
 3. Rackspace OpenStack Private Cloud
 4. HP Cloud 

@@ -49,13 +49,18 @@ Lastly, the openstack-connector-extension may be used to stage migration of an a
 6. Go to the controller dashboard on the browser. Under Setup->My Preferences->Advanced Features enable "Show Cloud Auto-Scaling features" if it is not enabled. 
 7. On the controller dashboard click "Cloud Auto-Scaling" and configure the compute cloud and the image.
 
-Click Compute Cloud->Register Compute Cloud. Refer to the image below
+Click Compute Cloud->Register Compute Cloud. Refer to the images below
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Fields.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStackCompute.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspacePublicCloud.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspacePrivateCloud.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/HPCloud.png)
 
-Click Image->Register Image. Refer to the image below
+Click Image->Register Image. Refer to the images below
 
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStack%20Compute%20Image.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStackComputeImage.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspaceImage.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/HPCloudImage.png)
 
 ##Contributing
 

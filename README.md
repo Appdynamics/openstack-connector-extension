@@ -13,6 +13,13 @@ Third, if the Controller detects that a machine instance has terminated unexpect
 
 Lastly, the openstack-connector-extension may be used to stage migration of an application from a physical to virtual infrastructure. Or the openstack-connector-extension may be used to add additional virtual capacity to an application to augment a preexisting physical infrastructure hosting the application.  
 
+The OpenStack connector is actually a meta-connector and supports the following OpenStack cloud implementations:
+
+1. OpenStack Nova
+2. Rackspace OpenStack Public Cloud
+3. Rackspace OpenStack Private Cloud
+4. HP Cloud 
+
 ##Directory Structure
 
 <table><tbody>

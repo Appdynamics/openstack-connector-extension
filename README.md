@@ -66,7 +66,7 @@ Click Compute Cloud->Register Compute Cloud. Refer to the images below
 Click Image->Register Image. Refer to the images below
 
 ![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/OpenStackComputeImage.png)
-![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspaceImage.png)
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspaceOpenStackImage.png)
 ![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/HPCloudImage.png)
 
 ##Contributing

@@ -15,12 +15,12 @@
  */
 package com.appdynamics.connectors.openstack;
 
+import com.singularity.ee.connectors.api.IControllerServices;
+import com.singularity.ee.connectors.entity.api.IProperty;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import com.singularity.ee.connectors.api.IControllerServices;
-import com.singularity.ee.connectors.entity.api.IProperty;
 
 
 //Used to grab IProperty values. If the named property field doesn't exist, it will/should return null.
@@ -31,11 +31,11 @@ public class Utils
 	public static final String IMAGE_REF = "Image Ref";
 	public static final String FLAVOR_REF = "Flavor Ref";
 	public static final String REGION = "Region";
-	
+
 	//property fields used by Rackspace Private Cloud
 	public static final String PRIVATE_CLOUD_ENDPOINT_URL = "Nova API Endpoint Url";
 
-	
+
 	//property fields used by Rackspace Connector
 	public static final String USER_NAME = "User Name"; //Also used by Rackspace Private Cloud
 	public static final String API_KEY = "Api Key";
@@ -43,7 +43,11 @@ public class Utils
 	public static final String ACCESS_IPV4_ADDRESS = "Access IPv4 Address";
 	public static final String ACCESS_IPV6_ADDRESS = "Access IPv6 Address";
 	public static final String ADMIN_PASSWORD = "Admin Password";
-	
+    private static final String SERVER_PREFIX = "Server Prefix";
+    private static final String METADATA = "Metadata";
+    private static final String PERSONALITY_PATH = "Personality Path";
+    private static final String PERSONALITY_FILE = "Personality File";
+
 	//property fields used by HP Cloud Compute Connector
 	public static final String ACCESS_KEY = "Access Key";
 	public static final String SECRET_KEY = "Secret Key";
@@ -51,11 +55,11 @@ public class Utils
 	public static final String SECURITY_GROUP = "Security Group";
 	public static final String KEY_PAIR = "Key Pair";
 	public static final String FLOATING_IP = "Floating Ip";
-	
+
 	public static final String COMPUTE_SERVICE_NAME = "Compute Service Name";
 	public static final String AUTHENTICATION_URL = "Token Authentication Url";
 	public static final String PASSWORD = "Password"; //Also used by Rackspace Private Cloud
-	
+
 	public static List<String> getSecurityGroup(IProperty[] properties, IControllerServices controllerServices)
 	{
 		String securityGroups = getValue(controllerServices.getStringPropertyValueByName(properties,
@@ -70,38 +74,38 @@ public class Utils
 
 		return Arrays.asList(groups);
 	}
-	
+
 	public static String getPassword(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, PASSWORD));
 	}
-	
+
 	public static String getAuthenticationUrl(IProperty[] properties, IControllerServices controllerServices)
 	{
 		String url = getValue(controllerServices.getStringPropertyValueByName(properties, AUTHENTICATION_URL));
-		
+
 		if(url.endsWith("/"))
 		{
 			url = url.substring(0, url.length() - 1);
 		}
-		
+
 		if(!url.endsWith("/tokens"))
 		{
 			url = url.concat("/tokens");
 		}
 		return url;
 	}
-	
+
 	public static String getComputeServiceName(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, COMPUTE_SERVICE_NAME));
 	}
-	
+
 	public static String getKeyPair(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, KEY_PAIR));
 	}
-	
+
 	public static String getFloatingIp(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, FLOATING_IP));
@@ -111,12 +115,12 @@ public class Utils
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, API_KEY));
 	}
-	
+
 	protected static String getAccessKey(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, ACCESS_KEY));
 	}
-	
+
 	protected static String getSecretKey(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, SECRET_KEY));
@@ -136,7 +140,7 @@ public class Utils
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, ACCESS_IPV6_ADDRESS));
 	}
-	
+
 	public static String getLocation(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, LOCATION));
@@ -146,6 +150,25 @@ public class Utils
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, ADMIN_PASSWORD));
 	}
+
+    protected static String getServerPrefix(IProperty[] properties, IControllerServices controllerServices)
+    {
+        return getValue(controllerServices.getStringPropertyValueByName(properties, SERVER_PREFIX));
+    }
+
+    protected static String getMetadata(IProperty[] properties, IControllerServices controllerServices)
+    {
+        return getValue(controllerServices.getStringPropertyValueByName(properties, METADATA));
+    }
+
+    protected static String getPersonalityPath(IProperty[] properties, IControllerServices controllerServices)
+    {
+        return getValue(controllerServices.getStringPropertyValueByName(properties, PERSONALITY_PATH));
+    }
+
+    protected static String getPersonalityFile(IProperty[] properties, IControllerServices controllerServices) {
+        return getValue(controllerServices.getStringPropertyValueByName(properties, PERSONALITY_FILE));
+    }
 
 	protected static String getUserName(IProperty[] properties, IControllerServices controllerServices)
 	{
@@ -172,7 +195,7 @@ public class Utils
 		return (value == null || value.trim().length() == 0) ? null : value.trim();
 	}
 
-	public static String getPrivateCloudEndpointUrl(IProperty[] properties, IControllerServices controllerServices) 
+	public static String getPrivateCloudEndpointUrl(IProperty[] properties, IControllerServices controllerServices)
 	{
 		return getValue(controllerServices.getStringPropertyValueByName(properties, PRIVATE_CLOUD_ENDPOINT_URL));
 	}

@@ -17,6 +17,7 @@ package com.appdynamics.openstack.requestbody.json;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -46,6 +47,9 @@ public class OpenStackServer
 	
 	@SerializedName("key_name")
 	private String keyPair;
+
+    @SerializedName("metadata")
+    private Map<String, String> metadata = null;
 
 	public void setKeyPair(String keyPair)
 	{
@@ -170,4 +174,12 @@ public class OpenStackServer
 			this.personality.add(p);
 		}
 	}
+
+    public Map<String, String> getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(Map<String, String> metadata) {
+        this.metadata = metadata;
+    }
 }

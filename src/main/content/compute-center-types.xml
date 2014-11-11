@@ -191,13 +191,23 @@
                 <default-file-value></default-file-value>
             </property-definition>
             <property-definition>
+                <name>Server Prefix</name>
+                <description>Server Prefix</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value>AD</default-string-value>
+                <string-max-length>80</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
                 <name>Region</name>
                 <description>Region</description>
                 <required>false</required>
                 <type>STRING</type>
                 <default-string-value>ORD</default-string-value>
                 <string-max-length>80</string-max-length>
-                <allowed-string-values>ORD,DFW,LON</allowed-string-values>
+                <allowed-string-values>ORD,DFW,LON,IAD,SYD,HKG</allowed-string-values>
                 <default-file-value></default-file-value>
             </property-definition>
             <property-definition>
@@ -223,6 +233,36 @@
             <property-definition>
                 <name>Access IPv6 Address</name>
                 <description>Access IPv6 Address</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Metadata</name>
+                <description>Metadata</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Personality Path</name>
+                <description>Personality file Path</description>
+                <required>false</required>
+                <type>STRING</type>
+                <default-string-value></default-string-value>
+                <string-max-length>100</string-max-length>
+                <allowed-string-values></allowed-string-values>
+                <default-file-value></default-file-value>
+            </property-definition>
+            <property-definition>
+                <name>Personality File</name>
+                <description>Personality file</description>
                 <required>false</required>
                 <type>STRING</type>
                 <default-string-value></default-string-value>

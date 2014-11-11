@@ -15,13 +15,12 @@
  */
 package com.appdynamics.connectors.openstack;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import com.singularity.ee.connectors.api.ConnectorException;
+import com.appdynamics.openstack.nova.OpenStackClient;
 import com.singularity.ee.connectors.api.IControllerServices;
 import com.singularity.ee.connectors.entity.api.IProperty;
-import com.appdynamics.openstack.nova.OpenStackClient;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class ClientLocator
 {
@@ -67,7 +66,7 @@ public class ClientLocator
 
 	public OpenStackClient getClient(String userName, String password, String apiKey, String accessKey,
 			String secretKey, String tenantId, String authenticationUrl, String computeServiceName)
-			throws ConnectorException, Exception
+			throws Exception
 	{
 		synchronized (connectorLock)
 		{

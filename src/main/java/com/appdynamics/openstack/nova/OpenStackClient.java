@@ -212,6 +212,7 @@ public class OpenStackClient
 
 		oss.setKeyPair(options.getKeyPair());
 		oss.setSecurityGroup(options.getSecurityGroup());
+        oss.setMetadata(options.getMetadata());
 
 		OpenStackServerBody rssb = new OpenStackServerBody();
 		rssb.setServer(oss);

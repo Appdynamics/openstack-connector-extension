@@ -15,19 +15,20 @@
  */
 package com.appdynamics.openstack.nova;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.appdynamics.openstack.requestbody.json.SecurityGroup;
 import org.apache.commons.codec.binary.Base64;
 
-import com.appdynamics.openstack.requestbody.json.SecurityGroup;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Jeffrey
- * 
+ *
  *         Optional fields when creating a server. Different service provider might have different fields.
 
- */	
+ */
 public class CreateServerOptions
 {
 
@@ -41,6 +42,18 @@ public class CreateServerOptions
 	private String floatingIp;
 	private String keyPair;
 	private List<SecurityGroup> securityGroup = null;
+    private Map<String, String> metadata = new HashMap<String, String>();
+
+
+    public Map<String, String> getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(Map<String, String> metadata) {
+        if(metadata != null) {
+            this.metadata = metadata;
+        }
+    }
 
 	public void addSecurityGroup(String securityGroup)
 	{
@@ -57,6 +70,12 @@ public class CreateServerOptions
 	public void setFile(String file, String filePath)
 	{
 		this.file = Base64.encodeBase64(file.getBytes());
+		this.filePath = filePath;
+	}
+
+	public void setEncodedFile(String encodedFile, String filePath)
+	{
+		this.file = encodedFile.getBytes();
 		this.filePath = filePath;
 	}
 

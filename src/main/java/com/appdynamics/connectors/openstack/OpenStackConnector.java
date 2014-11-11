@@ -20,7 +20,10 @@ import static com.singularity.ee.controller.KAppServerConstants.CONTROLLER_SERVI
 import static com.singularity.ee.controller.KAppServerConstants.DEFAULT_CONTROLLER_PORT_VALUE;
 
 import java.net.InetAddress;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -46,11 +49,11 @@ import com.appdynamics.openstack.nova.OpenStackClient;
 import com.appdynamics.openstack.nova.Server;
 
 /**
- * 
+ *
  * @author Jeffrey
- * 
+ *
  *         Generic OpenStack Connector. As of now, there are currently two connector implementations; Rackspace and HP Cloud.
- * 
+ *
  *         Note: When the controller grabs the corresponding image repository entity for each compute center, it uses the
  *         implementation class name as the identifier. So different connectors need to use different class names, otherwise
  *         the image repository entities will get mixed and the connector breaks. Hence an "implementation" of the
@@ -230,6 +233,28 @@ public abstract class OpenStackConnector implements IConnector
 		String accessIPv4 = Utils.getAccessIPv4Address(macProps, controllerServices);
 		String accessIPv6 = Utils.getAccessIPv6Address(macProps, controllerServices);
 		String adminPass = Utils.getAdminPass(macProps, controllerServices);
+        String serverPrefix = Utils.getServerPrefix(macProps, controllerServices);
+        if(serverPrefix == null || serverPrefix.length() <= 0) {
+            serverPrefix = "AD";
+        }
+
+        String metadataString = Utils.getMetadata(macProps, controllerServices);
+        Map<String, String> metadata = new HashMap<String, String>();
+        try {
+            if (metadataString != null && metadataString.length() > 0) {
+                StringTokenizer tokenizer = new StringTokenizer(metadataString, ";");
+                while (tokenizer.hasMoreTokens()) {
+                    String metadataToken = tokenizer.nextToken();
+                    String[] split = metadataToken.split("=");
+                    metadata.put(split[0], split[1]);
+                }
+            }
+        } catch(Exception e) {
+            logger.log(Level.WARNING, "Failed to parse all or some of metadata, using metadata "+metadata, e);
+        }
+
+        String personalityFilePath = Utils.getPersonalityPath(macProps, controllerServices);
+        String personalityFileContent = Utils.getPersonalityFile(macProps, controllerServices);
 
 		// 2 options supported on HP Cloud Compute
 		String keyPair = Utils.getKeyPair(macProps, controllerServices);
@@ -241,6 +266,8 @@ public abstract class OpenStackConnector implements IConnector
 		options.setAdminPass(adminPass);
 		options.setFile(userData.getBytes(), filePath);
 		options.setKeyPair(keyPair);
+        options.setMetadata(metadata);
+        options.setEncodedFile(personalityFileContent, personalityFilePath);
 
 		for (String s : securityGroups)
 		{
@@ -257,7 +284,7 @@ public abstract class OpenStackConnector implements IConnector
 			count = counter++;
 		}
 
-		server = client.createServer(region, flavorRef, imageRef, "AD_" + System.currentTimeMillis() + count, options);
+		server = client.createServer(region, flavorRef, imageRef, serverPrefix + "_" + System.currentTimeMillis() + count, options);
 
 		return server;
 	}

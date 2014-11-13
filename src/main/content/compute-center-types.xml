@@ -242,7 +242,7 @@
             </property-definition>
             <property-definition>
                 <name>Metadata</name>
-                <description>Metadata</description>
+                <description>Metadata, ex: Key1=Value1;Key2=Value2</description>
                 <required>false</required>
                 <type>STRING</type>
                 <default-string-value></default-string-value>
@@ -262,7 +262,7 @@
             </property-definition>
             <property-definition>
                 <name>Personality File</name>
-                <description>Personality file</description>
+                <description>Base64 encoded Personality file content</description>
                 <required>false</required>
                 <type>STRING</type>
                 <default-string-value></default-string-value>

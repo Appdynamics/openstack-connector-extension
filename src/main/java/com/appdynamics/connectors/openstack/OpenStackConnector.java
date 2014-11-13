@@ -27,6 +27,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.google.common.base.Strings;
 import com.singularity.ee.agent.resolver.AgentResolutionEncoder;
 import com.singularity.ee.connectors.api.ConnectorException;
 import com.singularity.ee.connectors.api.IConnector;
@@ -267,7 +268,11 @@ public abstract class OpenStackConnector implements IConnector
 		options.setFile(userData.getBytes(), filePath);
 		options.setKeyPair(keyPair);
         options.setMetadata(metadata);
-        options.setEncodedFile(personalityFileContent, personalityFilePath);
+		if( !Strings.isNullOrEmpty(personalityFilePath) && !Strings.isNullOrEmpty(personalityFileContent)) {
+			options.setEncodedFile(personalityFileContent, personalityFilePath);
+		} else {
+			logger.log(Level.INFO, "Ignoring personality setting as one or all of 'Personality Path' or 'Personality File' is not provided");
+		}
 
 		for (String s : securityGroups)
 		{

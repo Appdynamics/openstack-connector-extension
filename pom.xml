@@ -103,7 +103,7 @@
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/openstack/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/openstack-connector/lib</outputDirectory>
                             <overWriteReleases>false</overWriteReleases>
                             <overWriteSnapshots>false</overWriteSnapshots>
                             <overWriteIfNewer>true</overWriteIfNewer>
@@ -135,7 +135,7 @@
                         <phase>install</phase>
                         <configuration>
                             <target>
-                                <property name="target.dir" value="${build.directory}/openstack"/>
+                                <property name="target.dir" value="${build.directory}/openstack-connector"/>
                                 <mkdir dir="${target.dir}"/>
                                 <copy todir="${target.dir}">
                                     <fileset dir="src/main/content" includes="compute-center-types.xml"/>

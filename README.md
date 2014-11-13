@@ -69,6 +69,20 @@ Click Image->Register Image. Refer to the images below
 ![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspaceOpenStackImage.png)
 ![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/HPCloudImage.png)
 
+Select an Image and click 'Launch Instance'
+![alt tag](https://raw.github.com/Appdynamics/openstack-connector-extension/master/RackspaceLaunchInstance.png)
+
+Fill the details and click on 'Launch Instance' button.
+
+#### Rackspace specific fields on Launch Instance
+<ul>
+<li>Metadata: specify metadata to be passed. ex: Key1=Value1;Key2=Value2</li>
+<li>Personality Path: Personality file path. ex: /etc/test.sh</li>
+<li>Personality File: Base64 encoded file content.</li>
+</ul>
+
+
+
 ##Contributing
 
 Always feel free to fork and contribute any changes directly here on GitHub.

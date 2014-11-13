@@ -74,7 +74,6 @@ Select an Image and click 'Launch Instance'
 
 Fill the details and click on 'Launch Instance' button.
 
-#### Rackspace specific fields on Launch Instance
 <ul>
 <li>Metadata: specify metadata to be passed. ex: Key1=Value1;Key2=Value2</li>
 <li>Personality Path: Personality file path. ex: /etc/test.sh</li>
